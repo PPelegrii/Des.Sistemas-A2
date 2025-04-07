@@ -1,0 +1,34 @@
+{
+    "Albuns":{
+
+    "Album1": {
+        "Nome": "MASS OF THE FERMENTING DREGS ",
+        "Artista": "Mass of the Fermenting Dregs",
+        "Genero": "Rock Alternativo",
+        "Ano": 2006,
+        "CoverAlbum": "imgsAlbuns/kirametal.jfif",
+        "Faixas": [
+            {
+                "N°": "1",
+                "Nome": "delusionalism",
+                "Duracao": "3:41",
+                "Cover": "imgsMusicas/kirametal.jfif"
+            },
+            {
+                "N°": "2",
+                "Nome": "I F A SURFER",
+                "Duracao": "3:35",
+                "Cover": "imgsMusicas/kirametal.jfif"
+            },
+            {
+                "N°": "3",
+                "Nome": "skabetty",
+                "Duracao": "4:44",
+                "Cover": "imgsMusicas/kirametal.jfif"
+            }
+        ]
+    }
+
+
+    }
+}
