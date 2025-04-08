@@ -1,12 +1,11 @@
 <?php 
 
 session_start();
-$arquivo = "catalogo.json";
+$arquivo = "catalogo.php";
 
 if (file_exists($arquivo)) {
-    $json = file_get_contents($arquivo);
-    $dados = json_decode($json, true);
-    $album = $dados['Albuns'];
+    include $arquivo;
+    $album = $catalogo['Albuns'];
 } else {
     $album = [];
 }
@@ -33,16 +32,10 @@ if (file_exists($arquivo)) {
             <p>Ano: <?php echo $item['Ano']; ?></p>
             <img src="<?php echo $item['CoverAlbum']; ?>" alt="<?php echo $item['Nome']; ?>">
 
-            <div class="faixas">
-                <?php foreach ($item['Faixas'] as $faixa): ?>
-                    <div class="item">
-                        <p>Faixa <?php echo $faixa['N°']; ?></p>
-                        <h2><?php echo $faixa['Nome']; ?></h2>
-                        <p>Duração: <?php echo $faixa['Duracao']; ?> minutos</p>
-                        <img src="<?php echo $faixa['Cover']; ?>" alt="<?php echo $faixa['Nome']; ?>">
-                    </div>
-                <?php endforeach; ?>
-            </div>
+            <form method="GET" action="detalhes.php">
+                <input type="hidden" name="album" value="<?php echo ($item['Nome']); ?>">
+                <button type="submit" class="button">Ver mais</button>
+            </form>
 
         </div>
         <?php endforeach; ?>

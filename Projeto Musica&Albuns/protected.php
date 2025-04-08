@@ -7,7 +7,7 @@
 
     <?php
     session_start();
-    $arquivo = "catalogo.json";
+    $arquivo = "catalogo.php";
     $usuario = $_SESSION["usuario"] ?? null;
 
     if(is_null($usuario)){
@@ -15,9 +15,8 @@
     }
 
     if (file_exists($arquivo)) {
-        $json = file_get_contents($arquivo);
-        $dados = json_decode($json, true);
-        $album = $dados['Albuns'];
+        include $arquivo;
+        $album = $catalogo['Albuns'];
     } else {
         $album = [];
     }

@@ -1,3 +1,16 @@
+<?php 
+
+session_start();
+$arquivo = "catalogo.php";
+
+if (file_exists($arquivo)) {
+    include $arquivo;
+    $album = $catalogo['Albuns'];
+} else {
+    $album = [];
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
