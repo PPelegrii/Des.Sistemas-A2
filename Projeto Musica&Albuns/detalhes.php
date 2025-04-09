@@ -7,7 +7,7 @@ if (file_exists($arquivo)) {
     include $arquivo;
     $album = $catalogo['Albuns'];
 } else {
-    $album = [];
+    die("Erro: O arquivo catalogo.php não foi encontrado.");
 }
 ?>
 
@@ -24,17 +24,30 @@ if (file_exists($arquivo)) {
     <?php include("header.html"); ?>
 
     <div class="conteudo">
-        <?php foreach ($album as $item): ?>
+    <?php
+
+    if (isset($_GET['album'])) {
+    $nomeAlbum = $_GET['album'];
+    $albumEncontrado = null;
+
+    foreach ($catalogo['Albuns'] as $album) {
+        if ($album['Nome'] === $nomeAlbum) {
+            $albumEncontrado = $album;
+            break;
+        }
+    }
+    ?>
+    <?php if ($albumEncontrado): ?>
         <div class="album">
-            <h1><?php echo $item['Nome']; ?></h1>
-            <p>Artista: <?php echo $item['Artista']; ?></p>
-            <p>Gênero: <?php echo $item['Genero']; ?></p>
-            <p>Ano: <?php echo $item['Ano']; ?></p>
-            <img src="<?php echo $item['CoverAlbum']; ?>" alt="<?php echo $item['Nome']; ?>">
-            <p>Descrição: <?php echo $item['Descricao']; ?></p>
+            <h1><?php echo $albumEncontrado['Nome']; ?></h1>
+            <p>Artista: <?php echo $albumEncontrado['Artista']; ?></p>
+            <p>Gênero: <?php echo $albumEncontrado['Genero']; ?></p>
+            <p>Ano: <?php echo $albumEncontrado['Ano']; ?></p>
+            <img src="<?php echo $albumEncontrado['CoverAlbum']; ?>" alt="<?php echo $albumEncontrado['Nome']; ?>">
+            <p>Descrição: <?php echo $albumEncontrado['Descricao']; ?></p>
 
             <div class="faixas">
-                <?php foreach ($item['Faixas'] as $faixa): ?>
+                <?php foreach ($albumEncontrado['Faixas'] as $faixa): ?>
                     <div class="item">
                         <p>Faixa <?php echo $faixa['N°']; ?></p>
                         <h2><?php echo $faixa['Nome']; ?></h2>
@@ -43,9 +56,9 @@ if (file_exists($arquivo)) {
                     </div>
                 <?php endforeach; ?>
             </div>
-
         </div>
-        <?php endforeach; ?>
+        <?php else: ?> <p>Álbum não encontrado.</p> <?php  endif; ?>
+        <?php } ?>
     </div>
 </div>
 

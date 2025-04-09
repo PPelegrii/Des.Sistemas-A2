@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+  
 .conteudo {
     display: flex;
     flex-wrap: wrap;
@@ -30,8 +35,7 @@
 }
 
 .album img {
-    width: 70%;
-    max-width: 100%;
+    width: fit-content;
     border-radius: 8px;
     margin-bottom: 10px;
 }
@@ -41,6 +45,7 @@
     flex-wrap: wrap;
     gap: 15px;
     justify-content: center;
+    align-items: center;
     margin-top: 10px;
 }
 
@@ -62,7 +67,7 @@
 }
 
 .item img {
-    max-width: 100%;
+    max-width: 100px;
     border-radius: 4px;
     margin-top: 5px;
 }
