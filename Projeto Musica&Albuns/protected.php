@@ -12,6 +12,7 @@
 
     if(is_null($usuario)){
         header("Location: login.php");
+        exit;
     }
 
     if (file_exists($arquivo)) {
@@ -20,60 +21,99 @@
     } else {
         $album = [];
     }
+
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['Nome'], $_POST['Artista'], $_POST['Genero'], $_POST['Ano'])) {
+        $novoAlbum = [
+            'Nome' => $_POST['Nome'],
+            'CategoriaFiltro' => $_POST['CategoriaFiltro'] ?? 'Outro',
+            'Artista' => $_POST['Artista'],
+            'Genero' => $_POST['Genero'],
+            'Ano' => $_POST['Ano'],
+            'CoverAlbum' => $_POST['CoverAlbum'] ?? '',
+            'Descricao' => $_POST['Descricao'] ?? '',
+            'Faixas' => []
+        ];
+        $album[] = $novoAlbum;
+
+        $catalogo['Albuns'] = $album;
+        $conteudo = "<?php\n\$catalogo = " . var_export($catalogo, true) . ";\n";
+        file_put_contents($arquivo, $conteudo);
+    }
+
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['N°'], $_POST['Nome'], $_POST['Duracao'], $_POST['AlbumIndex'])) {
+        $novaFaixa = [
+            'N°' => $_POST['N°'],
+            'Nome' => $_POST['Nome'],
+            'Duracao' => $_POST['Duracao'],
+            'Cover' => $_POST['Cover'] ?? ''
+        ];
+    
+        $albumIndex = (int)$_POST['AlbumIndex'];
+        if (isset($album[$albumIndex])) {
+            array_push($album[$albumIndex]['Faixas'], $novaFaixa);
+    
+            $catalogo['Albuns'] = $album;
+            $conteudo = "<?php\n\$catalogo = " . var_export($catalogo, true) . ";\n";
+            file_put_contents($arquivo, $conteudo);
+        }
+    }
     ?>
 
 </head>
 <body>
-    <div class="main">
-        <?php include("header.html")?>
-
-        <div class="adminAlbum">
-            <form action="" method="post">
-                Nome <input type="text" name="Nome">
-                Artista <input type="text" name="Artista">
-                Genero <input type="text" name="Genero">
-                Ano <input type="number" name="Ano">
-                <input type="submit" value="Enviar">
-            </form>
-        </div>
-        <div class="adminFaixas">
-            <form action="" method="post">
-                N° <input type="number" name="N°">
-                Nome <input type="text" name="Nome">
-                Duração <input type="time" name="Duracao">
-                <input type="submit" value="Enviar">
-            </form>
-        </div>
-    </div>
-    <?php
+<div class="main">
+    <?php include("header.html");
+    
     $novoAlbum = $_POST["nomeAlbum"] ?? null;
     if(!is_null($novoAlbum) && !empty($novoAlbum)){
         $_SESSION['Albuns'][] = $novoAlbum;
     }
     ?>
     <div class="conteudo">
-        <?php foreach ($album as $album): ?>
-        <div class="album">
-            <h1><?php echo $album['Nome']; ?></h1>
-            <p>Artista: <?php echo $album['Artista']; ?></p>
-            <p>Gênero: <?php echo $album['Genero']; ?></p>
-            <p>Ano: <?php echo $album['Ano']; ?></p>
-            <img src="<?php echo $album['CoverAlbum']; ?>" alt="<?php echo $album['Nome']; ?>">
-
-            <div class="faixas">
-                <?php foreach ($album['Faixas'] as $faixa): ?>
-                    <div class="item">
-                        <p>Faixa <?php echo $faixa['N°']; ?></p>
-                        <h2><?php echo $faixa['Nome']; ?></h2>
-                        <p>Duração: <?php echo $faixa['Duracao']; ?> minutos</p>
-                        <img src="<?php echo $faixa['Cover']; ?>" alt="<?php echo $faixa['Nome']; ?>">
-                    </div>
-                <?php endforeach; ?>
-            </div>
-
+        <div class="adminAlbum">
+            <form action="" method="post">
+                Nome: <input type="text" name="Nome" required>
+                Artista: <input type="text" name="Artista" required>
+                Gênero: <input type="text" name="Genero" required>
+                Ano: <input type="number" name="Ano" required>
+                Categoria: Album | Single | EPs  <input type="text" name="CategoriaFiltro" required>
+                Capa do Album/Single/EP: <input type="text" name="CoverAlbum">
+                Descrição: <textarea name="Descricao"></textarea>
+                <input type="submit" value="Adicionar Álbum">
+            </form>
         </div>
-        <?php endforeach; ?>
+        <div class="adminFaixas">
+            <form action="" method="post">
+                Index do álbum<input type="number" name="AlbumIndex" value="0">
+                N°: <input type="number" name="N°" required>
+                Nome: <input type="text" name="Nome" required>
+                Duração: <input type="time" name="Duracao" required>
+                Capa da Faixa: <input type="text" name="Cover">
+            <input type="submit" value="Adicionar Faixa">
+            </form>
+        </div>
+        <?php foreach ($album as $album): ?>
+            <div class="Album">
+                <h1><?php echo $album['Nome']; ?></h1>
+                <p>Artista: <?php echo $album['Artista']; ?></p>
+                <p>Gênero: <?php echo $album['Genero']; ?></p>
+                <p>Ano: <?php echo $album['Ano']; ?></p>
+                <img src="<?php echo $album['CoverAlbum']; ?>" alt="<?php echo $album['Nome']; ?>">
+                
+                <div class="Faixas">
+                    <?php foreach ($album['Faixas'] as $faixa): ?>
+                        <div class="item">
+                            <p>Faixa <?php echo $faixa['N°']; ?></p>
+                            <h2><?php echo $faixa['Nome']; ?></h2>
+                            <p>Duração: <?php echo $faixa['Duracao']; ?> minutos</p>
+                            <img src="<?php echo $faixa['Cover']; ?>" alt="<?php echo $faixa['Nome']; ?>">
+                        </div>
+                        <?php endforeach; ?>
+                    </div>
+                   
+                </div>
+            <?php endforeach; ?>
     </div>
-
+</div>
 </body>
 </html>

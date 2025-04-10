@@ -38,12 +38,17 @@ if (file_exists($arquivo)) {
     }
     ?>
     <?php if ($albumEncontrado): ?>
-        <div class="album">
+        <div class="albumDetalhes">
+            <a href="http://localhost/Des.Sistemas-A2/Projeto%20Musica&Albuns/index.php">--- Voltar ---</a>
             <h1><?php echo $albumEncontrado['Nome']; ?></h1>
             <p>Artista: <?php echo $albumEncontrado['Artista']; ?></p>
             <p>Gênero: <?php echo $albumEncontrado['Genero']; ?></p>
             <p>Ano: <?php echo $albumEncontrado['Ano']; ?></p>
             <img src="<?php echo $albumEncontrado['CoverAlbum']; ?>" alt="<?php echo $albumEncontrado['Nome']; ?>">
+            <iframe class="player"width="500" height="280"
+                src="https://www.youtube.com/embed/<?php echo $albumEncontrado['Video']; ?>"
+                title="YTube video player" frameborder="0" allow="autoplay; gyroscope;">
+            </iframe>
             <p>Descrição: <?php echo $albumEncontrado['Descricao']; ?></p>
 
             <div class="faixas">
