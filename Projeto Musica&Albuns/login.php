@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
     <link rel="stylesheet" href="style.css">
+    <title>Login</title>
 </head>
 <body>
 <div class="main">
-    <?php include("header.html"); ?>
+    <?php include("header.php"); ?>
 
-    <div class="conteudo"> 
+    <div class="formLogin"> 
         <form action="" method="post">
             Usuario: <input type="text" name="usuario">
             Senha: <input type="text" name="senha">
@@ -20,24 +20,29 @@
 
 <?php
     session_start();
-    $usuario = $_SESSION["usuario"] ?? null;
-    if(!is_null($usuario)){
+
+    $usuarios = [
+        "admin" => password_hash("blah", PASSWORD_DEFAULT)
+    ];
+
+    if (isset($_SESSION["usuario"])){
         header("Location: index.php");
+        exit;
     }
 
     $usuario = $_POST["usuario"] ?? null;
     $senha = $_POST["senha"] ?? null;
 
-    if(!is_null($usuario) && !is_null($senha)){
-        if($usuario === "admin" && $senha === "123"){
+    if(!is_null($usuario) && !is_null($senha) && isset($usuarios[$usuario])){
+        if(password_verify($senha, $usuarios[$usuario])){
             $_SESSION["usuario"] = $usuario;
             header("Location: protected.php");
-
+            exit;
         }else{
-            header("Location: index.php");
+            die("<h1>Senha incorreta!</h1>");
         }
     }else{
-        echo "Fazer Login";
+        echo "<h2>Fazer Login</h2>";
     }
 ?>
 </div>

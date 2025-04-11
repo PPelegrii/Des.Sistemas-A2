@@ -16,12 +16,12 @@ if (file_exists($arquivo)) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
     <link rel="stylesheet" href="style.css">
+    <title>Index</title>
 </head>
 <body>
 <div class="main">
-    <?php include("header.html"); ?>
+    <?php include("header.php"); ?>
 
     <div class="conteudo">
         <?php foreach ($album as $item): ?>

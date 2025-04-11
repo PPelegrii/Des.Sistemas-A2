@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <style>
+    body{
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
     header{
         display: flex;
         width: 100%;

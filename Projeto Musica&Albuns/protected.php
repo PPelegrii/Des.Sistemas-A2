@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Dashboard</title>
 
     <?php
@@ -62,45 +63,45 @@
 </head>
 <body>
 <div class="main">
-    <?php include("header.html");
+    <?php include("header.php");
     
     $novoAlbum = $_POST["nomeAlbum"] ?? null;
     if(!is_null($novoAlbum) && !empty($novoAlbum)){
         $_SESSION['Albuns'][] = $novoAlbum;
     }
     ?>
-    <div class="conteudo">
-        <div class="adminAlbum">
+    <div class="adminConteudo">
+        <div class="formAdminAlbum">
             <form action="" method="post">
                 Nome: <input type="text" name="Nome" required>
                 Artista: <input type="text" name="Artista" required>
                 Gênero: <input type="text" name="Genero" required>
                 Ano: <input type="number" name="Ano" required>
                 Categoria: Album | Single | EPs  <input type="text" name="CategoriaFiltro" required>
-                Capa do Album/Single/EP: <input type="text" name="CoverAlbum">
+                Capa do Album/Single/EP: <input type="file" name="CoverAlbum" accept="image/*" required>
                 Descrição: <textarea name="Descricao"></textarea>
-                <input type="submit" value="Adicionar Álbum">
             </form>
         </div>
-        <div class="adminFaixas">
+        <div class="formAdminFaixas">
             <form action="" method="post">
                 Index do álbum<input type="number" name="AlbumIndex" value="0">
                 N°: <input type="number" name="N°" required>
                 Nome: <input type="text" name="Nome" required>
                 Duração: <input type="time" name="Duracao" required>
-                Capa da Faixa: <input type="text" name="Cover">
-            <input type="submit" value="Adicionar Faixa">
+                Capa da Faixa: <input type="file" name="Cover" accept="image/*" required>
+            <input type="submit" value="Adicionar Álbum e/ou Faixa">
             </form>
         </div>
+
         <?php foreach ($album as $album): ?>
-            <div class="Album">
+            <div class="adminAlbum">
                 <h1><?php echo $album['Nome']; ?></h1>
                 <p>Artista: <?php echo $album['Artista']; ?></p>
                 <p>Gênero: <?php echo $album['Genero']; ?></p>
                 <p>Ano: <?php echo $album['Ano']; ?></p>
                 <img src="<?php echo $album['CoverAlbum']; ?>" alt="<?php echo $album['Nome']; ?>">
                 
-                <div class="Faixas">
+                <div class="adminFaixas">
                     <?php foreach ($album['Faixas'] as $faixa): ?>
                         <div class="item">
                             <p>Faixa <?php echo $faixa['N°']; ?></p>

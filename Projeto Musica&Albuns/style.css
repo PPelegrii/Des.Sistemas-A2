@@ -10,7 +10,34 @@
     padding: 20px;
     justify-content: left;
 }
-
+.formLogin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: rgb(255, 255, 255);
+    height: 30vh;
+    gap: 15px;
+}
+.formLogin input[type="text"], form input[type="password"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.formLogin input[type="submit"] {
+    background-color: rgb(88, 33, 151);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 .album {
     border: 1px solid rgb(167, 167, 167);
     border-radius: 20px;
@@ -103,4 +130,83 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 8px;
+}
+
+.adminConteudo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 5px;
+    padding: 20px;
+    justify-content: left;
+}
+.formAdminAlbum, .formAdminFaixas {
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+    max-width: 600px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.formAdminAlbum input, .formAdminFaixas input,
+.formAdminAlbum textarea, .formAdminFaixas textarea {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.formAdminAlbum label, .formAdminFaixas label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+}
+
+.formAdminFaixas input[type="submit"] {
+    background-color: rgb(88, 33, 151);
+    color: white;
+    border: none;
+    padding-top: 10px;
+    margin-top: 130px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.formAdminAlbum input[type="number"], .formAdminFaixas input[type="number"],
+.formAdminFaixas input[type="time"] {
+    max-width: 100px;
+}
+.adminAlbum{
+    border: 1px solid rgb(167, 167, 167);
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: rgb(255, 255, 255);
+    max-width: 31%;
+}
+.adminAlbum img{
+    width: 100%; 
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 10px 16px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+}
+.adminAlbum a{
+    justify-content: center;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    color: rgb(0, 0, 0);
+}
+.adminFaixas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
