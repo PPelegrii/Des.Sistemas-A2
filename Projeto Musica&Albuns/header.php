@@ -34,9 +34,15 @@
 <body>
     <header>
         <nav>
-            <a href="http://localhost/Des.Sistemas-A2/Projeto%20Musica&Albuns/index.php">Index</a>
+            <a href="http://localhost/Des.Sistemas-A2/Projeto%20Musica&Albuns/index.php">Inicio</a>
             <a href="http://localhost/Des.Sistemas-A2/Projeto%20Musica&Albuns/login.php">Login</a>
             <a href="http://localhost/Des.Sistemas-A2/Projeto%20Musica&Albuns/logout.php" class="logout">Logout</a>
+        </nav>
+        <nav>
+            <a>Categoria Filtros --></a>
+            <a href="filtrar.php?categoria=EPs">EPs</a>
+            <a href="filtrar.php?categoria=Album">Álbuns</a>
+            <a href="filtrar.php?categoria=Single">Singles</a>
         </nav>
     </header>
 </body>

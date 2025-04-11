@@ -343,33 +343,26 @@ $catalogo = array (
           'Duracao' => '3:35',
           'Cover' => 'imgs/YouWereMeantForMe.jpg',
         ),
-        1 => 
-        array (
-          'N°' => 2,
-          'Nome' => 'You Were Meant for Me - Album edit',
-          'Duracao' => '4:13',
-          'Cover' => 'imgs/YouWereMeantForMe.jpg',
-        ),
       ),
     ),
     7 => 
     array (
       'Nome' => 'Como Nossos Pais',
       'CategoriaFiltro' => 'Single',
-      'Artista' => '',
-      'Genero' => '',
-      'Ano' => 0,
-      'CoverAlbum' => 'imgs',
-      'Video' => '',
-      'Descricao' => '<hr><br><strong><em></em></strong> ',
+      'Artista' => 'Elis Regina',
+      'Genero' => 'MPB',
+      'Ano' => 1976,
+      'CoverAlbum' => 'imgs/ComoNossosPais.jpg',
+      'Video' => 'yFPwqTep1Rc',
+      'Descricao' => '<hr><br><strong><em>Como Nossos Pais</em></strong> é uma canção composta por Belchior, lançada no álbum <strong>Alucinação</strong>, de 1976, mas que fez sucesso na voz de Elis Regina, que a gravou no aclamado álbum Falso Brilhante, também de 1976. A música fala sobre o conflito de gerações acentuado pela repressão da Ditadura Militar. Composta na década de 70, a canção foi lançada no álbum <strong>Alucinação</strong>, tornando-se um dos maiores clássicos da música popular brasileira.',
       'Faixas' => 
       array (
         0 => 
         array (
           'N°' => 1,
-          'Nome' => '',
-          'Duracao' => '',
-          'Cover' => 'imgs',
+          'Nome' => 'Como Nossos Pais',
+          'Duracao' => '4:22',
+          'Cover' => 'imgs/ComoNossosPais.jpg',
         ),
       ),
     ),
@@ -377,20 +370,20 @@ $catalogo = array (
     array (
       'Nome' => 'Stranger',
       'CategoriaFiltro' => 'Single',
-      'Artista' => '',
-      'Genero' => '',
-      'Ano' => 0,
-      'CoverAlbum' => 'imgs',
-      'Video' => '',
-      'Descricao' => '<hr><br><strong><em></em></strong> ',
+      'Artista' => 'Billy Joel',
+      'Genero' => 'Soft Rock',
+      'Ano' => 1977,
+      'CoverAlbum' => 'imgs/TheStranger.jpg',
+      'Video' => 'E5ofVsxTPoc',
+      'Descricao' => '<hr><br><strong><em>Stranger</em></strong> com uma batida simples e suave, Joel explora lados íntimos e introspectivos de uma vida. As inseguranças de ser um jovem ambicioso, a melancolia que envolve crescer e descobrir coisas sozinho, a esperança que vem com o autoconhecimento e a inspiração que é se respeitar. Em uma entrevista para Howard Stern, Billy falou um pouco sobre como muitas pessoas pensam que precisam ter toda a vida resolvida aos 30 anos de idade, quando elas ainda têm a vida inteira pela frente. Essa é uma das ideias principais da canção e aparece bastante ao longo dela. <strong>Vienna</strong> é como se fosse um colo.',
       'Faixas' => 
       array (
         0 => 
         array (
           'N°' => 1,
-          'Nome' => '',
-          'Duracao' => '',
-          'Cover' => 'imgs',
+          'Nome' => 'Stranger',
+          'Duracao' => '3:34',
+          'Cover' => 'imgs/TheStranger.jpg',
         ),
       ),
     ),
@@ -398,20 +391,20 @@ $catalogo = array (
     array (
       'Nome' => 'Theme from The Greatest American Hero <br>(Believe It or Not) ',
       'CategoriaFiltro' => 'Single',
-      'Artista' => '',
-      'Genero' => '',
-      'Ano' => 0,
-      'CoverAlbum' => 'imgs',
-      'Video' => '',
-      'Descricao' => '<hr><br><strong><em></em></strong> ',
+      'Artista' => 'Joey Scarbury',
+      'Genero' => 'Yacht rock',
+      'Ano' => 1981,
+      'CoverAlbum' => 'imgs/BelieveItorNot.jpg',
+      'Video' => 'WqF5M7IK7I0',
+      'Descricao' => '<hr><br><strong><em>Believe It or Not</em></strong> é uma canção composta por Mike Post com letras de Stephen Geyer e cantada pelo cantor americano Joey Scarbury . Ela serve como tema da série de televisão dos anos 1980 <strong>The Greatest American Hero</strong>. A faixa foi posteriormente incluída no álbum de estreia de Scarbury em 1981, <strong>America´s Greatest Hero </strong>. A canção enfatiza a necessidade de acreditar em algo maior e de sentir-se amado. No entanto, há uma frustração palpável na letra, pois a banda sugere que, apesar dessa necessidade universal, muitos de nós não conseguem encontrar essa fé ou amor.',
       'Faixas' => 
       array (
         0 => 
         array (
           'N°' => 1,
-          'Nome' => '',
-          'Duracao' => '',
-          'Cover' => 'imgs',
+          'Nome' => 'Theme from The Greatest American Hero <br>(Believe It or Not)',
+          'Duracao' => '3:11',
+          'Cover' => 'imgs/BelieveItorNot.jpg',
         ),
       ),
     ),
@@ -419,11 +412,11 @@ $catalogo = array (
     array (
       'Nome' => 'You´re So Vain',
       'CategoriaFiltro' => 'Single',
-      'Artista' => '',
+      'Artista' => 'Carly Simon',
       'Genero' => 'Pop, Soft Rock',
-      'Ano' => 0,
-      'CoverAlbum' => 'imgs',
-      'Video' => '',
+      'Ano' => 1972,
+      'CoverAlbum' => 'imgs/YoureSoVain.jpg',
+      'Video' => 'cleCtBP0o5Y',
       'Descricao' => '<hr><br><strong><em>You´re So Vain</em></strong> é o título de uma canção escrita e composta por Carly Simon em 1972, lançada originalmente em junho daquele ano, e oficialmente em novembro, como parte de seu LP No Secrets. O hit foi listado pela Billboard como uma das 100 maiores canções de todos os tempos, além de fazê-la figurar no Grammy Hall of Fame, em 1994. Simon tinha uma música chamada <strong>Bless You, Ben</strong> cuja letra não a deixou satisfeita. Durante uma festa, ela presenciou a entrada de uma celebridade caracterizada por um amigo como “se estivesse subindo num iate”. A imagem foi suficiente para acender a luz na imaginação da cantora, que encontrou na melodia da canção arquivada um lar perfeito para as ideias.',
       'Faixas' => 
       array (
@@ -432,7 +425,7 @@ $catalogo = array (
           'N°' => 1,
           'Nome' => 'You´re So Vain',
           'Duracao' => '4:19',
-          'Cover' => 'imgs',
+          'Cover' => 'imgs/YoureSoVain.jpg',
         ),
       ),
     ),
@@ -496,6 +489,48 @@ $catalogo = array (
           'Nome' => 'I´d Do Anything for Love <br>(But I Won´t Do That)',
           'Duracao' => '12:01',
           'Cover' => 'imgs/IDAfL(BIWDT).jpg',
+        ),
+      ),
+    ),
+    14 => 
+    array (
+      'Nome' => '(I’m) Waiting For The Sun',
+      'CategoriaFiltro' => 'Single',
+      'Artista' => 'Uchuu Nekoko',
+      'Genero' => 'Alternativa, indie',
+      'Ano' => 2019,
+      'CoverAlbum' => 'imgs/ImWaitingForTheSun.jpg',
+      'Video' => '3Mlp5tL7NtA',
+      'Descricao' => '<hr><br><strong><em>(I’m) Waiting For The Sun</em></strong> ',
+      'Faixas' => 
+      array (
+        0 => 
+        array (
+          'N°' => 1,
+          'Nome' => '(I’m) Waiting For The Sun',
+          'Duracao' => '3:36',
+          'Cover' => 'imgs/ImWaitingForTheSun.jpg',
+        ),
+      ),
+    ),
+    15 => 
+    array (
+      'Nome' => 'FLOWER GIRL',
+      'CategoriaFiltro' => 'Single',
+      'Artista' => 'Kinoko Teikoku',
+      'Genero' => 'Japanese Indie, Rock',
+      'Ano' => 2013,
+      'CoverAlbum' => 'imgs/FLOWER GIRL.jpg',
+      'Video' => 'GMHLvK-3qkE',
+      'Descricao' => '<hr><br><strong><em>FLOWER GIRL</em></strong> é uma das composições mais sensíveis e poéticas da banda japonesa <strong>Kinoko Teikoku</strong>, conhecida por sua sonoridade que transita entre o shoegaze, dream pop e o indie rock, com atmosferas sonoras envolventes e letras profundamente introspectivas. <strong>Flower Girl</strong> evoca imagens de inocência, efemeridade e transformação. <br>A canção parece narrar a perspectiva de uma jovem que observa o mundo à sua volta com olhos sonhadores, mas também com uma crescente consciência da impermanência da vida e dos sentimentos. As flores, como metáfora central, representam tanto a beleza quanto a fragilidade dos momentos — um símbolo recorrente na poesia japonesa. <br>Há uma melancolia sutil nas entrelinhas, como se a "garota-flor" soubesse que a doçura de sua juventude e de seus sonhos logo será tocada pelo tempo. Musicalmente, a canção acompanha esse sentimento com uma progressão suave, quase flutuante, que cria um ambiente contemplativo. As guitarras cintilantes e os vocais sussurrados contribuem para uma atmosfera que oscila entre a ternura e a nostalgia. <strong>Flower Girl</strong> convida o ouvinte a uma pausa — uma reflexão sobre o florescer e o desvanecer, sobre os desejos não ditos e os instantes preciosos que escapam como pétalas ao vento. Mais do que uma simples canção, <strong>Flower Girl</strong> é uma pequena obra de arte lírica e sonora, que captura a essência da sensibilidade estética do <strong>Kinoko Teikoku</strong>, reafirmando seu lugar como um dos grupos mais líricos e evocativos da cena alternativa japonesa. <br><br>"...As flores que desabrocharam em sua pele murcharam<br>Alguém querido para você, machucou você<br>As flores que você segurava em seus sonhos se espalharam<br>As flores vermelhas que você segurava, te enlouqueceram<br>...<br>"Não vá, fique aqui"<br>Se eu tivesse sido capaz de dizer<br>então as coisas seriam diferentes? As coisas teriam mudado?<br>Se eu pudesse voltar para aquele momento..."<br>',
+      'Faixas' => 
+      array (
+        0 => 
+        array (
+          'N°' => 1,
+          'Nome' => 'FLOWER GIRL',
+          'Duracao' => '7:10',
+          'Cover' => 'imgs/FLOWER GIRL.jpg',
         ),
       ),
     ),
