@@ -78,8 +78,9 @@
                 Gênero: <input type="text" name="Genero" required>
                 Ano: <input type="number" name="Ano" required>
                 Categoria: Album | Single | EPs  <input type="text" name="CategoriaFiltro" required>
-                Capa do Album/Single/EP: <input type="file" name="CoverAlbum" accept="image/*" required>
+                Capa do Album/Single/EP: <input type="file" name="CoverAlbum" accept="image/*">
                 Descrição: <textarea name="Descricao"></textarea>
+                <input type="submit" value="Adicionar Álbum">
             </form>
         </div>
         <div class="formAdminFaixas">
@@ -88,8 +89,8 @@
                 N°: <input type="number" name="N°" required>
                 Nome: <input type="text" name="Nome" required>
                 Duração: <input type="time" name="Duracao" required>
-                Capa da Faixa: <input type="file" name="Cover" accept="image/*" required>
-            <input type="submit" value="Adicionar Álbum e/ou Faixa">
+                Capa da Faixa: <input type="file" name="Cover" accept="image/*">
+            <input type="submit" value="Adicionar Faixa">
             </form>
         </div>
 

@@ -168,7 +168,7 @@
     display: block;
 }
 
-.formAdminFaixas input[type="submit"] {
+.formAdminAlbum input[type="submit"] .formAdminFaixas input[type="submit"] {
     background-color: rgb(88, 33, 151);
     color: white;
     border: none;
